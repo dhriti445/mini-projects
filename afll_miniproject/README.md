@@ -14,6 +14,7 @@ Syntax validation of a Java program using Context-Free Grammar (CFG) for various
 - Simple Object declaration
 - Array Declaration
 - Looping Constructs
+
 (can be tested for more constructs)
 
 ## How to Run
