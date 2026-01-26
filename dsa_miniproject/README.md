@@ -55,11 +55,19 @@ The system applies **fundamental data structures** to efficiently handle evidenc
 Main Menu
 
 ├─ Add Evidence (Push)
+
 ├─ Remove Evidence (Pop)
+
 ├─ Display Evidence
+
 ├─ Add Suspect Connection
+
 ├─ Find Connection Path (BFS)
-├─ Displa
+
+├─ Display Suspect Network
+
+└─ Exit
+
 
 ---
 
