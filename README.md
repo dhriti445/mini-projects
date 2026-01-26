@@ -8,8 +8,8 @@ Each folder represents an independent mini project with its own logic, code, and
 
 ## 📁 Projects Included
 
-- **DDCO Project:**  Implemented the control logic for the traffic lights, handling time constraints and simulating the systems behaviour.
 - **AFLL Project:** Syntax Validation of a Java by writing the Context Free Grammar
+- **DDCO Project:**  Implemented the control logic for the traffic lights, handling time constraints and simulating the systems behaviour.
 - **DSA Project:** Crime Evidence Tracker
 
 
