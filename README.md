@@ -2,15 +2,17 @@
 
 This repository contains a collection of small projects built to practice programming concepts, problem-solving, and hands-on development.
 
-Each folder represents an independent mini project with its own logic, code, and documentation.
+Each folder represents an independent mini project with its own implementation, documentation, and source code.
 
 ---
 
 ## 📁 Projects Included
 
-- **AFLL Project:** Syntax Validation of a Java by writing the Context Free Grammar
-- **DDCO Project:**  Implemented the control logic for the traffic lights, handling time constraints and simulating the systems behaviour.
-- **DSA Project:** Crime Evidence Tracker
-
+- **AFLL Project:** Syntax Validation of Java Programs using Context-Free Grammar (CFG).
+- **DDCO Project:** Traffic Light Controller that simulates signal operation while handling timing constraints.
+- **DSA Project:** Crime Evidence Tracker for managing and organizing investigation records.
+- **CN Project:** Custom Port Scanner with Service Detection using TCP.
+- **MPCA Project:** Smart Helmet for Accident Detection and Emergency Alert System.
+- **OS Project:** Operating Systems mini project.
 
 ---
