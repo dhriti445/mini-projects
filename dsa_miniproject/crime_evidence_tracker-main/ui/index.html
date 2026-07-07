@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Crime Evidence Tracker — UI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Crime Evidence Tracker</h1>
+    <p class="muted">A simple browser UI (keeps your C files unchanged). Data stored in browser localStorage. Import/export JSON to persist externally.</p>
+  </header>
+
+  <main>
+    <nav class="tabs">
+      <button data-target="evidence-section" class="tab active">Evidence</button>
+      <button data-target="connections-section" class="tab">Connections</button>
+    </nav>
+
+    <section id="evidence-section" class="card view">
+      <h2>Add / Edit Evidence</h2>
+      <form id="evidenceForm">
+        <input type="hidden" id="evidenceId">
+        <label>Short description
+          <input type="text" id="description" required>
+        </label>
+        <label>Location
+          <input type="text" id="location">
+        </label>
+        <label>Collected by
+          <input type="text" id="collectedBy">
+        </label>
+        <label>Date collected
+          <input type="date" id="dateCollected">
+        </label>
+        <div class="form-actions">
+          <button type="submit" id="saveBtn">Save</button>
+          <button type="button" id="resetBtn">Reset</button>
+        </div>
+      </form>
+
+      <h3>Evidence List</h3>
+      <div class="toolbar">
+        <input type="file" id="importFile" accept="application/json">
+        <button id="exportBtn">Export JSON</button>
+        <button id="clearAllBtn">Clear All</button>
+      </div>
+      <table id="evidenceTable">
+        <thead>
+          <tr><th>ID</th><th>Description</th><th>Location</th><th>Collected By</th><th>Date</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <section id="connections-section" class="card view hidden">
+      <h2>Connections</h2>
+      <form id="connectionForm">
+        <input type="hidden" id="connectionId">
+        <label>Source Evidence ID
+          <input type="text" id="sourceId" required placeholder="e.g. 1">
+        </label>
+        <label>Target Evidence ID
+          <input type="text" id="targetId" required placeholder="e.g. 2">
+        </label>
+        <label>Type / Note
+          <input type="text" id="connectionNote" placeholder="e.g. related, chain-of-custody">
+        </label>
+        <div class="form-actions">
+          <button type="submit" id="saveConnectionBtn">Add Connection</button>
+          <button type="button" id="resetConnectionBtn">Reset</button>
+        </div>
+      </form>
+
+      <h3>Existing Connections</h3>
+      <div class="toolbar">
+        <button id="exportConnectionsBtn">Export Connections</button>
+      </div>
+      <table id="connectionsTable">
+        <thead>
+          <tr><th>ID</th><th>Source</th><th>Target</th><th>Note</th><th>Actions</th></tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>Find Connections / Shortest Path</h3>
+      <form id="findForm" class="find-form">
+        <label>From ID <input type="text" id="findFrom" required></label>
+        <label>To ID <input type="text" id="findTo" required></label>
+        <div class="form-actions">
+          <button type="submit" id="findBtn">Find Path</button>
+          <button type="button" id="clearFindBtn">Clear</button>
+        </div>
+      </form>
+      <div id="findResult" class="card small hidden"></div>
+    </section>
+
+    <!-- Graph view removed per user request -->
+  </main>
+
+  <footer>
+    <small class="muted">Local demo UI — use Import/Export to persist data outside this browser.</small>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
