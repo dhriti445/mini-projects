@@ -14,5 +14,5 @@ Each folder represents an independent mini project with its own implementation, 
 - **CN Project:** Custom Port Scanner with Service Detection using TCP.
 - **MPCA Project:** Smart Helmet for Accident Detection and Emergency Alert System.
 - **OS Project:** Operating Systems mini project.
-
+- **WebTech Project:** CampusConnect project.
 ---
